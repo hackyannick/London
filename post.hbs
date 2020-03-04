@@ -24,7 +24,7 @@
     {{!-- Email subscribe form at the bottom of the page --}}
     {{#if @labs.subscribers}}
     <section class="subscribe-form">
-        <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
+        <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
         <p>Get the latest posts delivered right to your inbox</p>
         {{subscribe_form placeholder="youremail@example.com"}}
     </section>
@@ -38,11 +38,27 @@
         default byline. --}}
 
 
+<script>
+function setIframeHeight() {
+  var iFrameID = document.getElementById('iframe');
+  if(iFrameID) {
+    iFrameID.height = "";
+    iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+  }
+}
+</script>
+<iframe src="https://static-assets.yannick-hack.io/content/dsgvo/dsgvo.html" name="Kommentieren" id="Kommentieren" scrolling="auto" frameborder="0" marginheight="0px" marginwidth="0px" height="500" width="100%" onload="setIframeHeight();">
+</iframe>
+
+
+
+
     </footer>
 
     {{!--
     <section class="post-content-comments">
-        If you want to embed comments, this is a good place to do it!
+<div id="disqus_thread"></div>
+
     </section>
     --}}
 
