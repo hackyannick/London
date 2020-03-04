@@ -1,4 +1,4 @@
-# London the for Ghost CMS
+# London theme for Ghost CMS
 
 Forked and Customized Version of the London Theme for my Website.
 
